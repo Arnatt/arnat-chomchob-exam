@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-09T14:21:57.727Z",
+    "end": "2024-04-09T14:22:17.109Z",
+    "duration": 19382,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1ffcc6e1-a344-4664-a4c9-adc576e9fa78",
+      "title": "",
+      "fullFile": "D:\\Workspace\\ChomCHOB\\automate-test-exam\\test\\FirstTestExam.spec.js",
+      "file": "\\test\\FirstTestExam.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cfaa52a1-7e08-42e4-813a-492ceb9efe4d",
+          "title": "Test Filter Functionality",
+          "fullFile": "D:\\Workspace\\ChomCHOB\\automate-test-exam\\test\\FirstTestExam.spec.js",
+          "file": "\\test\\FirstTestExam.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Test Filter Functionality\"",
+              "fullTitle": "Test Filter Functionality \"before each\" hook in \"Test Filter Functionality\"",
+              "timedOut": null,
+              "duration": 7729,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build()\nawait driver.get(\"https://www.nejavu.com/\");\nvars = {}",
+              "err": {},
+              "uuid": "144bf05c-0e91-4708-b92a-47c5400ec260",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Test Filter Functionality\"",
+              "fullTitle": "Test Filter Functionality \"after each\" hook in \"Test Filter Functionality\"",
+              "timedOut": null,
+              "duration": 78,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "82edbfb3-35fa-4eef-ae53-5d9a3faa288d",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Open the Nejavu website",
+              "fullTitle": "Test Filter Functionality Open the Nejavu website",
+              "timedOut": null,
+              "duration": 4483,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// await driver.get(\"https://www.nejavu.com/\");\nawait driver.manage().window().maximize();\ntry {\n    await driver.findElement(By.xpath(\"//a[@class='close-modal']\")).click();\n} catch (error) {\n    console.log(error);\n}\nawait driver.findElement(By.xpath(\"//div[@class='dn db-lg rel z-2']//li[3]//a[1]\")).click();\n\n// Get Book Titles\n// const bookTitles = [];\n// for (let i = 1; i < 6; i++) {\n//     const xpath = \"(//h5[@class='detail-title'])[\" + i + \"]\";\n//     const item = await driver.findElement(By.xpath(xpath)).getText();\n//     bookTitles.push(item);\n// }\n\n// Add Book To Cart\n// await driver.sleep(5000);\n// const element = await driver.findElement(By.css(\"div[class='bg-white book-list'] div:nth-child(6) div:nth-child(1) div:nth-child(1) div:nth-child(1) a:nth-child(1) img:nth-child(1)\"));\n// await driver.actions().scroll(0, 0, 0, 0, element).perform();\n// await driver.sleep(5000);\n// for (let addBook = 1; addBook < 6; addBook++) {\n//     let bookXpath = \"(//button[@id='quick-cart-button'])[\" + addBook + \"]\";\n//     await driver.sleep(2000);\n//     await driver.findElement(By.xpath(bookXpath)).click();\n// }\n// // View Cart\n// await driver.sleep(3000);\n// await driver.findElement(By.xpath(\"(//div[@class='nev-noti-icon']//img)[2]\")).click();\n// await driver.sleep(5000);\n\n// //Varify Book Titles\n// //Get Book Titles in Cart\n// const bookInCart = [];\n// for (let i = 2; i < bookTitles.length + 1; i++) {\n//     const locator = \"body > main:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(\" + i + \") > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > p:nth-child(1)\"\n//     const item = await driver.findElement(By.css(locator)).getText();\n//     bookInCart.push(item);\n// }\n// //Assert Book Titles\n// for (let i = 0; i < bookInCart.length; i++) {\n//     assert.strictEqual(bookInCart[i].toString(), bookTitles[i].toString());\n// }\n// //Delete Book in Cart\n// for (let deleteBook = 1; deleteBook < 6; deleteBook++) {\n//     let deleteXpath = \"(//a[@class='delete-item']//img)[1]\";\n//     await driver.sleep(2000);\n//     await driver.findElement(By.xpath(deleteXpath)).click();\n//     await driver.sleep(5000);\n//     await driver.findElement(By.xpath(\"//button[text()='ใช่ ลบรายการ']\")).click();\n//     await driver.sleep(5000);\n// }\n// //Check badge = 0\n// const badge = await driver.findElement(By.id(\"badge-cart\")).getText();\n// assert.strictEqual(badge, \"0\");",
+              "err": {},
+              "uuid": "75dc06d8-0e97-45ad-880a-7a09c6bfbc31",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get Book Titles",
+              "fullTitle": "Test Filter Functionality Get Book Titles",
+              "timedOut": null,
+              "duration": 100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const bookTitles = [];\nfor (let i = 1; i < 6; i++) {\n    const xpath = \"(//h5[@class='detail-title'])[\" + i + \"]\";\n    const item = await driver.findElement(By.xpath(xpath)).getText();\n    bookTitles.push(item);\n}\n\nconsole.log(bookTitles);",
+              "err": {},
+              "uuid": "6b951b4e-fabf-4658-b407-4559942562eb",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75dc06d8-0e97-45ad-880a-7a09c6bfbc31",
+            "6b951b4e-fabf-4658-b407-4559942562eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4583,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
